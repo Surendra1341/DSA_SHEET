@@ -1,0 +1,18 @@
+package com.Maths;
+//https://leetcode.com/problems/binary-gap
+class BinaryGap {
+    public int binaryGap(int n) {
+        int count = 0;
+        int max = 0;
+        while(n > 0) {
+            if ((n & 1) == 1) {
+                max = Math.max(count, max);
+                count = 1;
+            } else if(count > 0) {
+                count++;
+            }
+            n >>= 1;
+        }
+        return max;
+    }
+}
