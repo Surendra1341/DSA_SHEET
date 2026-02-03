@@ -158,7 +158,7 @@ public class AVL {
         prettyDisplay(node.right, level + 1);
         if (level != 0) {
             for (int i = 0; i < level - 1; i++) {
-                System.out.print("\t\t");
+                System.out.print("|\t\t");
             }
             System.out.println("|------->" + node.value);
         } else {

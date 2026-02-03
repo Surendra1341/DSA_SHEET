@@ -49,11 +49,11 @@ public class Knapsack {
 
         if(wt[n-1]<=w) {
             //store calculated ans
-            t[n][w]= Math.max(val[n-1]+KnapsackRecursive(wt,val,w-wt[n-1],n-1),KnapsackRecursive(wt,val,w,n-1) );
+            t[n][w]= Math.max(val[n-1]+KnapsackRecursiveMemoization(wt,val,w-wt[n-1],n-1),KnapsackRecursiveMemoization(wt,val,w,n-1) );
             return t[n][w];
         }
 
-        return t[n][w]= KnapsackRecursive(wt,val,w,n-1);
+        return t[n][w]= KnapsackRecursiveMemoization(wt,val,w,n-1);
     }
 
 
